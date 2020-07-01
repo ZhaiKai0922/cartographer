@@ -48,8 +48,11 @@ cmake ..
 make -j2
 sudo make install
 
+#在rk3399下会不存在/usr/lib/aarch64-linux-gnu/libGL.so，导致后续的cartographer_rviz编译失败，链接生成。
+sudo ln -s /usr/lib/aarch64-linux-gnu/libGL.so.1 /usr/lib/aarch64-linux-gnu/libGL.so
+
 cd ../
 mkdir -p ~/carto_ws/src/
 cp -r cartographer_ros/ ~/carto_ws/src/
 cd ~/carto_ws/
-catkin_make
+catkin_make -j2
