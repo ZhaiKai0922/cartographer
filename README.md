@@ -1,5 +1,7 @@
 # ubuntu18.04安装cartographer以及cartographer_ros
 
+## 前言
+
 cartographer一直在维护，从之前的tf1到现在melodic版本上的tf2_ros都有更新支持。
 
 而且cartographer所依赖的库也在一直更新，包括abseil-cpp，ceres-solver，protobuf等，其依赖的版本混乱，并不能相互兼容。
@@ -11,6 +13,8 @@ cartographer一直在维护，从之前的tf1到现在melodic版本上的tf2_ros
 为了解决此问题，本仓库固化依赖以及cartographer的版本，经过多次测试，该方法有效。
 
 版本固化时间为2020年07月01日16:58:57。
+
+> 该仓库的carto以及carto_ros代码均为当前官方github最新代码，依赖调教好版本的依赖包也都已经放在dependencies文件夹，所有代码均使用cmake编译方式，无官方推荐的ninjia（对持续源码修改以及开发不方便），该仓库的方法不保证对后续谷歌更新的carto以及carto_ros有效，请使用本仓库下的代码版本。建议将仓库克隆到catkin_ws/下与src平级目录，后续修改源码或者查看代码实现可直接跳转。
 
 ## 安装基础依赖
 
