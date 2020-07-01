@@ -41,7 +41,7 @@ make -j2
 sudo make install
 sudo ldconfig
 
-cd ../../../
+cd ../../
 mkdir build
 cd build
 cmake ..
