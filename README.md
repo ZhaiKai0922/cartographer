@@ -152,6 +152,18 @@ catkin_make -j2
 
 
 
+## 数据集
+
+[谷歌官方文档页面](https://google-cartographer-ros.readthedocs.io/en/latest/demos.html)给出的数据集已经下载到北京办公区的本地服务器上，10个bag文件，地址为：http://192.168.9.18/data/carto_bags/
+
+或者直接使用本仓库的下载脚本get_carto_bags.sh将所有bag文件下载到本地~/data/carto_bags/中。
+
+```bash
+./get_carto_bags.sh
+```
+
+
+
 ## 参考链接
 
 1. [蓝鲸机器人论坛](http://community.bwbot.org/topic/620/cartographer-install-and-demo)
