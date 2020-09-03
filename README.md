@@ -12,9 +12,7 @@ cartographer由谷歌一直在维护，从之前的tf1到现在melodic版本上�
 
 为了解决此问题，本仓库固化依赖以及cartographer的版本，经过多次测试，该方法有效。
 
-版本固化时间为2020年07月01日16:58:57。
-
-> 该仓库的carto以及carto_ros代码均为当前官方github最新代码，依赖调教好版本的依赖包也都已经放在dependencies文件夹，所有代码均使用cmake编译方式，无官方推荐的ninjia（对持续源码修改以及开发不方便），该仓库的方法不保证对后续谷歌更新的carto以及carto_ros有效，请使用本仓库下的代码版本。建议将仓库克隆到catkin_ws/下与src平级目录，后续修改源码或者查看代码实现可直接跳转。
+> 版本固化时间为2020年07月01日16:58:57。
 
 
 
@@ -22,6 +20,8 @@ cartographer由谷歌一直在维护，从之前的tf1到现在melodic版本上�
 
 1. [cartographer](https://github.com/yowlings/cartographer)
 2. [cartographer_ros](https://github.com/yowlings/cartographer_ros)
+
+> 该仓库的cartographer以及cartographer_ros代码均为笔者固化版本时官方github最新代码，依赖调教好版本的依赖包也都已经放在dependencies文件夹，所有代码均使用cmake编译方式，无官方推荐的ninjia（对持续源码修改以及开发不方便），该仓库的方法不保证对后续谷歌更新的cartographer以及cartographer_ros有效，请使用本仓库下的代码版本。建议cartographer_ros将仓库克隆到catkin_ws/下与src平级目录，后续修改源码或者查看代码实现可直接跳转。
 
 
 
@@ -167,9 +167,13 @@ catkin_make -j2
 
 ## 一键安装
 
+> 使用该脚本安装前请确保已安装ROS-Melodic。
+
 ```bash
 ./install.sh
 ```
+
+> 为了避免与用户本机的ros工作空间中已存在的cartographer_ros包可能发生的冲突，安装脚本会在用户目录新建一个carto_ws的ROS工作空间，运行完成后用户可自行选择移到自己的工作空间中一同使用。
 
 ### ARM64主板注意事项
 
